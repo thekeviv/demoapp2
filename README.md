@@ -1,6 +1,6 @@
 # Demoapp2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0. I explore the most common features of Angular and implement them to learn how Angular development is done
 
 ## Development server
 
