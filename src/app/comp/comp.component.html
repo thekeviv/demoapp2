@@ -1,0 +1,35 @@
+<h2>{{title}}</h2>
+<p>{{nameA}}</p>
+<input #name type="text" [(ngModel)]="nameA" (keyup)="addNameA(name.value)" >
+<h2>{{nameB}}</h2>
+<input #nameaa type="text" [disabled]="disabled" (keyup)="addNameB(nameaa.value)">
+<h2> {{nameA | uppercase | concat:" I am Fine"}} </h2>
+<h2>{{ date | date:"MM/dd/yy"}}</h2>
+<div *ngIf="enabled; else haha">
+    <h2>Apple</h2>
+</div>
+
+<div *ngIf="enabled; then haha; else haha2"></div>
+
+
+
+<ng-template #haha>
+    <h2>HaHaHaHa</h2>
+</ng-template>
+
+<ng-template #haha2>
+    <div [ngSwitch]="my_favourite">
+        <h2 *ngSwitchCase="'Orange'">Orange</h2>
+        <h2 *ngSwitchCase="'Mango'">Mango</h2>
+        <h2 *ngSwitchDefault>I hate fruits!</h2>
+    </div>
+</ng-template>
+
+<div *ngFor="let fruit of fruits, first as i, index as in">
+{{i}}-{{fruit}}-{{in}}
+</div>
+<div *ngFor="let fruit of fruits">
+     <app-childfruit [fruit]="fruit" (notify)="onNotified($event)"></app-childfruit>
+</div>
+
+<p>{{serviceText}}</p>
